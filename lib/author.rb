@@ -21,7 +21,7 @@ class Author
   end
   
   def self.post_count
-    total = Post.all.each {|post|post.author == self}
+    total = Post.all.map {|post|post.author == self}
     total.size
   end
     
